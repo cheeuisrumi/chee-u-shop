@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="AI가 처음이어도 내 웹페이지를 직접 만들고 수정해 공유하는 DENIQ AI 원데이클래스">
+  <title>DENIQ AI 원데이클래스</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="./landing.css?v=20261003-registration-top">
+  <link rel="stylesheet" href="./shop.css?v=20261117-toss">
+  <script src="https://js.tosspayments.com/v2/standard"></script>
+  <script type="module" src="./landing.js?v=20261003-registration-top"></script>
+  <script type="module" src="./pay.js?v=20261117-toss"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 바로가기</a>
+
+  <header class="site-header">
+    <a class="brand" href="#main" aria-label="studio DENIQ 처음으로">
+      <svg class="brand-mark" viewBox="0 0 128 120" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h40c42.5 0 72 25.3 72 60s-29.5 60-72 60H0V0Zm18 5v110h22c33.2 0 55-23.4 55-55S73.2 5 40 5H18Z"></path><path fill="currentColor" d="M57 73h18l53 47h-20L57 73Z"></path></svg>
+      <span>studio <strong>DENIQ</strong></span>
+    </a>
+    <nav class="site-nav" aria-label="페이지 메뉴">
+      <a href="#method">수업 방식</a>
+      <a href="#curriculum">상세 과정</a>
+      <a href="#instructor">강사</a>
+      <a href="#pay">신청·결제</a>
+    </nav>
+    <a class="header-cta" href="#pay">수강 신청·결제</a>
+  </header>
+
+  <p class="config-alert" data-config-alert role="status" hidden>최신 수업 정보를 불러오지 못했습니다. 잠시 후 다시 확인해주세요.</p>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="hero-intro">
+        <p class="eyebrow" data-hero-eyebrow>DENIQ AI 원데이클래스</p>
+        <h1>질문이 제작이 되는 경험</h1>
+        <p class="hero-lead" data-hero-lead>AI가 처음이어도 내 웹페이지를 직접 만들고, 원하는 모습으로 수정해 다른 사람에게 공유합니다.</p>
+        </div>
+        <div class="hero-support">
+        <p class="hero-detail" data-hero-detail>한 번의 정답을 받는 수업이 아닙니다. 질문하고, 결과를 보고, 다시 고치는 과정을 내 손으로 경험합니다.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#pay">수강 신청하고 결제하기</a>
+          <a class="button button-quiet" href="#payment">준비물·신청 안내 보기</a>
+        </div>
+        <a class="hero-registration" href="#pay">신청 전 필수 확인 · 질문지 작성 후 토스 결제까지 완료해주세요 <span aria-hidden="true">↓</span></a>
+        <dl class="hero-facts" aria-label="수업 운영 정보">
+          <div><dt>일시</dt><dd data-operation="schedule">11월 8일 · 15:00–19:00</dd></div>
+          <div><dt>장소</dt><dd data-operation="venue">압구정로데오역<br>도보 5분</dd></div>
+          <div><dt>수업료</dt><dd data-operation="price">350,000원</dd></div>
+          <div><dt>인원</dt><dd data-operation="capacity">회차당 8명 내외</dd></div>
+        </dl>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="./assets/photo-meeting-v1.jpg" alt="햇빛이 드는 공간에서 테이블에 둘러앉아 대화하는 사람들" width="1200" height="1600" fetchpriority="high" data-hero-image>
+      </figure>
+    </section>
+
+    <section class="registration-panel section-shell" id="pay" aria-labelledby="registration-title">
+      <span id="bank" aria-hidden="true"></span>
+      <p class="registration-label">신청 전 필수 확인 · 수강 신청·결제</p>
+      <h2 id="registration-title">질문지 작성 후,<br>토스로 수강료를 결제해주세요</h2>
+      <p class="depositor-guide">사전 질문지를 먼저 작성해주세요. 아래에서 회차·실명·휴대폰 번호를 입력하고 <strong>결제하기</strong>를 누르면 신청이 완료됩니다.</p>
+      <ol class="registration-steps">
+        <li><strong>사전 질문지 작성</strong><span>참여 회차를 선택하고<br>실명과 휴대폰 번호를 입력해주세요.</span></li>
+        <li><strong>수강료 결제</strong><b class="registration-price" data-payment-amount>350,000원</b><span>카드·토스페이·카카오페이·네이버페이·가상계좌로 결제합니다. 결제는 토스페이먼츠가 처리합니다.</span></li>
+        <li><strong>결제 확인 후 안내 문자</strong><span>결제가 확인되면 참가 확정과<br>상세 장소를 문자로 안내합니다.</span></li>
+      </ol>
+
+      <div class="pay-card" id="order">
+        <header class="pay-card-head">
+          <div>
+            <p class="pay-eyebrow">ORDER · 수강 신청</p>
+            <h3>수강 정보를 입력하고 결제해주세요</h3>
+          </div>
+          <span class="pay-test-badge">TEST MODE · 테스트 결제 (실결제 아님)</span>
+        </header>
+
+        <form id="pay-form" novalidate>
+          <fieldset class="pay-fieldset">
+            <legend>01 · 참여 회차</legend>
+            <label class="session-option">
+              <input type="radio" name="session" value="2026-11-08" checked>
+              <span class="session-option-copy"><strong>11월 8일 (일)</strong><small>15:00–19:00 · 회차당 8명 내외 · 압구정로데오역 도보 5분</small></span>
+            </label>
+          </fieldset>
+
+          <fieldset class="pay-fieldset">
+            <legend>02 · 신청자 정보</legend>
+            <div class="pay-grid">
+              <label class="pay-input"><span>실명</span><input id="buyer-name" name="name" type="text" autocomplete="name" placeholder="예: 손루미" required></label>
+              <label class="pay-input"><span>휴대폰 번호</span><input id="buyer-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="010-0000-0000" required></label>
+              <label class="pay-input pay-input-wide"><span>이메일 <em>선택</em></span><input id="buyer-email" name="email" type="email" autocomplete="email" placeholder="cheeuuuuu@gmail.com"></label>
+            </div>
+            <p class="pay-help">결제 확인과 수업 안내 문자 발송에 사용합니다. 입력하신 정보는 안내 목적 외로 사용하지 않습니다.</p>
+          </fieldset>
+
+          <fieldset class="pay-fieldset">
+            <legend>03 · 결제 수단</legend>
+            <div id="payment-method" class="toss-payment-method">
+              <p class="toss-loading">결제 수단을 불러오는 중입니다…</p>
+            </div>
+            <div id="agreement" class="toss-agreement"></div>
+          </fieldset>
+
+          <div class="pay-total">
+            <dl>
+              <div><dt>수강료</dt><dd data-pay-amount>350,000원</dd></div>
+              <div><dt>할인</dt><dd>0원</dd></div>
+            </dl>
+            <p class="pay-total-sum"><span>총 결제금액</span><strong data-pay-amount>350,000원</strong></p>
+          </div>
+
+          <label class="pay-consent">
+            <input type="checkbox" id="pay-consent">
+            <span>수강 신청 및 결제 진행에 동의하며, 이용약관·개인정보 처리방침·취소 및 환불 규정을 확인했습니다. <em>(필수)</em></span>
+          </label>
+          <div class="pay-consent-links">
+            <button type="button" data-dialog="terms">이용약관</button>
+            <button type="button" data-dialog="privacy">개인정보 처리방침</button>
+            <button type="button" data-dialog="refund">취소·환불 규정</button>
+          </div>
+
+          <p class="pay-error" id="pay-error" role="alert" hidden></p>
+          <button type="submit" class="pay-button" id="pay-button" disabled>결제하기</button>
+          <p class="pay-note">결제는 토스페이먼츠를 통해 안전하게 처리됩니다. 이 페이지는 테스트 키로 동작하는 샘플이며 실제 금액은 청구되지 않습니다.</p>
+
+          <details class="pay-bank">
+            <summary>무통장 입금으로 신청하기</summary>
+            <p>신한은행 100-030-375974 · 예금주 대성컨템포러리<br>입금자명은 신청자 실명과 같게 해주세요. 입금 확인 후 안내 문자를 보내드립니다.</p>
+          </details>
+        </form>
+      </div>
+
+      <div class="registration-bottom"><a class="button registration-cta" href="./survey.html" data-course-cta>사전 질문지 작성하기</a><p>질문지 작성과 결제를 모두 마치면 신청이 완료됩니다.</p></div>
+    </section>
+
+    <section class="promise section-shell" id="promise" aria-labelledby="promise-title">
+      <p class="section-label">이 수업은 어떤 수업인가요?</p>
+      <div>
+        <h2 id="promise-title">웹페이지 한 장을 만들며<br>AI와 일하는 순서를 배웁니다</h2>
+        <p class="promise-flow">
+          <span class="flow-line"><span class="flow-step">무엇을 원하는지 말하기</span><span class="flow-step">→ 결과를 읽고 판단하기</span></span>
+          <span class="flow-line"><span class="flow-step">→ 고칠 부분을 구체적으로 요청하기</span><span class="flow-step">→ 오류를 해결하기</span><span class="flow-step">→ 완성한 주소를 공유하기</span></span>
+        </p>
+      </div>
+    </section>
+
+    <section class="audience section-shell" id="audience" aria-labelledby="audience-title">
+      <header class="section-heading">
+        <p class="section-label">이런 분을 위한 수업</p>
+        <h2 id="audience-title">잘 몰라도 시작할 수 있고,<br>직접 해봐야 이해되는 분</h2>
+      </header>
+      <ol class="audience-list" data-audience-list>
+        <li><span>01</span><p>AI를 처음 접해 어디서부터 시작할지 막막한 분</p></li>
+        <li><span>02</span><p>질문과 답변을 넘어 직접 결과물을 만들어보고 싶은 분</p></li>
+        <li><span>03</span><p>원하는 결과가 나오지 않을 때 어떻게 수정할지 배우고 싶은 분</p></li>
+      </ol>
+    </section>
+
+    <section class="method section-shell" id="method" aria-labelledby="method-title">
+      <header class="section-heading">
+        <p class="section-label">수업 방식</p>
+        <h2 id="method-title">설명보다 먼저 해보고,<br>결과를 보며 고칩니다</h2>
+      </header>
+      <div class="method-editorial">
+        <figure class="method-photo editorial-photo">
+          <img src="./assets/photo-collaboration-v1.jpg" alt="자료를 펼쳐두고 서로 의견을 나누는 두 동료" width="1600" height="1200" loading="lazy" decoding="async">
+        </figure>
+        <p class="photo-side-note">질문하고, 함께 살펴보고, 다시 만들어보는 시간.</p>
+      </div>
+      <div class="method-list" data-teaching-method>
+        <article><span>01</span><div><h3>같이 만들기</h3><p>강사의 완성 화면을 구경하는 데서 끝내지 않고 각자의 페이지를 직접 만듭니다.</p></div></article>
+        <article><span>02</span><div><h3>판단하고 수정하기</h3><p>AI의 첫 결과를 그대로 쓰지 않고 목적과 화면을 확인하며 다음 요청을 정합니다.</p></div></article>
+        <article><span>03</span><div><h3>막힘을 해결하기</h3><p>오류가 나면 메시지를 읽고 원인을 좁혀 다시 시도하는 순서를 연습합니다.</p></div></article>
+      </div>
+    </section>
+
+    <section class="transformation" id="results" aria-labelledby="results-title">
+      <div class="section-shell">
+        <header class="section-heading section-heading-light">
+          <p class="section-label">수업 전과 후</p>
+          <h2 id="results-title">막연한 질문이<br>확인 가능한 제작 요청으로</h2>
+        </header>
+        <div class="request-example" aria-label="질문 수정 예시">
+          <div><span>처음 요청</span><p data-request-before>“매장 소개 페이지를 예쁘게 만들어줘.”</p></div>
+          <b aria-hidden="true">→</b>
+          <div><span>수정한 요청</span><p data-request-after>“베이커리를 처음 방문할 손님에게 대표 빵과 영업시간을 보여주고, 휴대폰에서도 잘 보이며 길찾기 링크가 열리게 만들어주세요.”</p></div>
+        </div>
+        <p class="request-explanation" data-request-explanation>상황 · 원하는 결과 · 참고자료 · 확인 기준을 더해 실제로 만들고 확인할 수 있는 요청으로 바꿉니다.</p>
+        <div class="outcome-grid" data-outcomes></div>
+      </div>
+    </section>
+
+    <section class="curriculum" id="curriculum" aria-labelledby="curriculum-title">
+      <div class="section-shell">
+        <header class="section-heading">
+          <p class="section-label">상세 커리큘럼</p>
+          <h2 id="curriculum-title">처음 켜는 순간부터<br>공유할 수 있는 주소까지</h2>
+          <p class="section-intro">각 단계마다 설명을 듣고, 직접 움직이고, 다음 단계에 쓸 결과를 남깁니다.</p>
+        </header>
+        <nav class="curriculum-overview" aria-label="7단계 실습 흐름">
+          <a href="#journey-01"><span>01—02</span><strong>이해·기획</strong><small>AI 이해 · 주제 정하기</small></a>
+          <a href="#journey-03"><span>03</span><strong>준비</strong><small>내 제작 환경 만들기</small></a>
+          <a href="#journey-04"><span>04—05</span><strong>제작·수정</strong><small>첫 실행 · 원하는 모습으로</small></a>
+          <a href="#journey-06"><span>06—07</span><strong>저장·공유</strong><small>공개 링크 · 다음 제작</small></a>
+        </nav>
+        <p class="curriculum-guide">단계를 누르면 설명과 실습 내용을 펼쳐볼 수 있습니다.</p>
+        <div class="journey-list" id="journey-list" data-journey></div>
+      </div>
+    </section>
+
+    <section class="deliverables section-shell" id="deliverables" aria-labelledby="deliverables-title">
+      <header class="section-heading">
+        <p class="section-label">가져가는 자료</p>
+        <h2 id="deliverables-title">수업이 끝난 뒤에도 다시 써볼 수 있도록</h2>
+      </header>
+      <div class="deliverable-list" data-deliverables></div>
+      <div class="materials-heading" id="materials"><p class="section-label">실제 교재 미리보기</p><p>이미지를 누르면 큰 화면으로 확인할 수 있습니다.</p></div>
+      <div class="materials-visuals" data-materials-visuals></div>
+    </section>
+
+    <section class="afterclass section-shell" id="afterclass" aria-labelledby="afterclass-title">
+      <div class="afterclass-copy">
+        <p class="section-label">수업에서 일상으로</p>
+        <h2 id="afterclass-title">다음 아이디어는,<br>내 일상에서</h2>
+        <p>수업에서 익힌 질문과 수정의 순서를<br>내 업무와 관심사에도 이어가보세요.</p>
+      </div>
+      <figure class="afterclass-photo editorial-photo">
+        <img src="./assets/photo-everyday-v1.jpg" alt="공항 대기 공간에서 각자의 기기를 사용하는 사람들" width="1600" height="900" loading="lazy" decoding="async">
+      </figure>
+    </section>
+
+    <section class="instructor section-shell" id="instructor" aria-labelledby="instructor-title">
+      <div class="profile-overview">
+        <div class="profile-photo"><img src="./assets/logan-profile-bw.png" alt="LOGAN 흑백 상반신 프로필" loading="lazy" decoding="async"></div>
+        <article class="profile-copy">
+          <p class="section-label">강사</p>
+          <h2 id="instructor-title" data-instructor-name>LOGAN</h2>
+          <p class="profile-role" data-instructor-role>Studio DENIQ 대표·아트 디렉터</p>
+          <blockquote class="profile-quote" data-instructor-quote>AI가 아이디어를 실제 결과물로 바꾸는 전 과정을 설계합니다</blockquote>
+          <details class="profile-about"><summary>소개 더 보기</summary><p class="profile-summary" data-instructor-summary>LOGAN은 Studio DENIQ의 대표·아트 디렉터로서 AI 영상과 미디어아트, 브랜드 비주얼과 IP, 콘텐츠 제작 도구, 3D·가구·공간으로 이어지는 프로젝트를 기획하고 디렉팅합니다.</p></details>
+        </article>
+      </div>
+      <ol class="instructor-credits" data-instructor-credits role="list" aria-label="주요 이력"><li><span class="instructor-credit-number" aria-hidden="true">01</span><p class="instructor-credit-line"><strong class="instructor-credit-title">Cannes World Film Festival</strong><span aria-hidden="true"> · </span><span class="instructor-credit-detail">Finalist · 〈LEVIATHAN〉</span></p></li></ol>
+    </section>
+
+    <section class="logistics" id="payment" aria-labelledby="logistics-title">
+      <div class="section-shell">
+        <header class="section-heading">
+          <p class="section-label">준비와 등록 안내</p>
+          <h2 id="logistics-title">수업 준비와 신청 안내</h2>
+        </header>
+        <div class="logistics-grid">
+          <article class="preparation-panel">
+            <h3>준비물</h3>
+            <ul data-preparation><li>실습에 사용할 개인 노트북과 충전기</li></ul>
+          </article>
+        </div>
+        <section class="registration-summary" aria-labelledby="registration-summary-title">
+          <h3 id="registration-summary-title">수강 신청·결제 안내</h3>
+          <p>사전 질문지를 작성한 뒤 토스페이먼츠로 수강료를 결제해주세요.</p>
+          <ol class="registration-steps">
+            <li><strong>사전 질문지 작성</strong><span>참여 회차를 선택하고 실명과 휴대폰 번호를 입력해주세요.</span></li>
+            <li><strong>수강료 <b data-payment-amount>350,000원</b> 결제</strong><span>카드·토스페이·카카오페이·네이버페이·가상계좌로 결제할 수 있습니다.</span></li>
+            <li><strong>결제 확인 후 안내 문자</strong><span>결제가 확인되면 참가 확정과 상세 장소를 문자로 안내합니다.</span></li>
+          </ol>
+          <a class="button button-primary" href="#pay">수강 신청하고 결제하기</a>
+        </section>
+        <div class="refund-row">
+          <h3>취소·환불</h3>
+          <p data-refund-policy>환불 기준 안내 예정</p>
+          <p data-refund-after></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section-shell" id="faq" aria-labelledby="faq-title">
+      <header class="section-heading"><p class="section-label">자주 묻는 질문</p><h2 id="faq-title">신청 전에 확인하세요</h2></header>
+      <div class="faq-list" data-faq></div>
+    </section>
+
+    <section class="apply" id="apply" aria-labelledby="apply-title">
+      <div class="section-shell apply-inner">
+        <p class="section-label">사전 질문</p>
+        <h2 id="apply-title">무엇을 만들고 싶은지<br>먼저 들려주세요</h2>
+        <p>결제 전 필수 작성입니다. 실명·연락처와 관심사를 알려주시면 수업 준비와 참가 안내에 활용합니다.</p>
+        <a class="apply-link" href="./survey.html" data-course-cta><span>사전 질문지 작성하기</span><b aria-hidden="true">↗</b></a>
+        <p class="application-status" data-application-status>현재 사전 질문지는 검토용이며 실제 접수되지 않습니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="brand"><svg class="brand-mark" viewBox="0 0 128 120" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M0 0h40c42.5 0 72 25.3 72 60s-29.5 60-72 60H0V0Zm18 5v110h22c33.2 0 55-23.4 55-55S73.2 5 40 5H18Z"></path><path fill="currentColor" d="M57 73h18l53 47h-20L57 73Z"></path></svg><span>studio <strong>DENIQ</strong></span></div>
+      <p class="footer-tagline">질문이 제작이 되는 경험</p>
+    </div>
+
+    <div class="footer-business">
+      <dl>
+        <div><dt>상호</dt><dd>주식회사 대성컨템포러리</dd></div>
+        <div><dt>대표이사</dt><dd>손루미</dd></div>
+        <div><dt>사업자등록번호</dt><dd>261-81-18424</dd></div>
+        <div><dt>통신판매업신고번호</dt><dd>신고 진행 중 (심사 전 입력 예정)</dd></div>
+        <div><dt>사업장 주소</dt><dd>서울특별시 강남구 도산대로85길 30, 205호 (청담동)</dd></div>
+        <div><dt>고객센터</dt><dd><a href="tel:01097021213">010-9702-1213</a></dd></div>
+        <div><dt>이메일</dt><dd><a href="mailto:cheeuuuuu@gmail.com">cheeuuuuu@gmail.com</a></dd></div>
+        <div><dt>수업 운영</dt><dd>Studio DENIQ · LOGAN</dd></div>
+      </dl>
+      <div class="footer-links">
+        <button type="button" data-dialog="terms">이용약관</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" data-dialog="privacy">개인정보처리방침</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" data-dialog="refund">취소·환불 규정</button>
+      </div>
+      <p class="footer-note">결제는 토스페이먼츠(주)를 통해 처리되며, 결제 정보는 전자금융거래법에 따라 보호됩니다. © 2026 STUDIO DENIQ.</p>
+    </div>
+  </footer>
+
+  <dialog class="legal-dialog" id="dialog-terms" aria-labelledby="dialog-terms-title">
+    <form method="dialog" class="legal-dialog-head">
+      <h2 id="dialog-terms-title">이용약관</h2>
+      <button type="submit" aria-label="닫기">닫기</button>
+    </form>
+    <div class="legal-dialog-body">
+      <h3>제1조 목적</h3>
+      <p>본 약관은 주식회사 대성컨템포러리(이하 “회사”)가 운영하는 Studio DENIQ 원데이클래스(이하 “수업”)의 신청, 결제, 취소 및 환불에 관한 회사와 이용자의 권리·의무를 정합니다.</p>
+      <h3>제2조 수업의 신청과 결제</h3>
+      <p>이용자는 참여 회차, 실명, 휴대폰 번호를 입력하고 사전 질문지를 작성한 뒤 수강료를 결제합니다. 결제는 토스페이먼츠(주)의 전자결제 서비스를 통해 처리되며, 결제가 확인된 시점에 참가가 확정됩니다.</p>
+      <h3>제3조 수강료와 포함 범위</h3>
+      <p>수강료는 회차당 350,000원이며, 수업 당일의 실습과 수업 자료를 포함합니다. 개인 노트북, 프로그램 설치, AI 서비스 유료 구독료는 수강료에 포함되지 않으며 이용자가 별도로 준비합니다.</p>
+      <h3>제4조 취소 및 환불</h3>
+      <p>취소와 환불은 아래 기준에 따릅니다. 수업일 2주 전까지 취소하는 경우 전액 환불하며, 수업일 2주 전부터 7일 전까지 취소하는 경우 수강료의 50%를 환불합니다. 수업일 7일 전 이후 및 수업 당일 취소·불참은 환불되지 않습니다. 환불은 결제 수단으로 처리되며 카드 결제 취소는 카드사 기준에 따라 영업일이 소요될 수 있습니다.</p>
+      <h3>제5조 회사의 책임</h3>
+      <p>회사는 천재지변, 강사 사정 등 불가피한 사유로 수업이 취소되는 경우 이용자에게 사전에 안내하고 수강료를 전액 환불합니다. 이용자가 준비물을 갖추지 못해 발생한 학습 결과에 대해서는 회사가 책임지지 않습니다.</p>
+      <h3>제6조 분쟁의 해결</h3>
+      <p>본 약관과 관련한 분쟁은 대한민국 법률에 따르며, 회사와 이용자는 상호 협의하여 해결합니다.</p>
+      <h3>사업자 정보</h3>
+      <p>상호 주식회사 대성컨템포러리 · 대표이사 손루미 · 사업자등록번호 261-81-18424<br>주소 서울특별시 강남구 도산대로85길 30, 205호 (청담동) · 고객센터 010-9702-1213 · cheeuuuuu@gmail.com</p>
+    </div>
+  </dialog>
+
+  <dialog class="legal-dialog" id="dialog-privacy" aria-labelledby="dialog-privacy-title">
+    <form method="dialog" class="legal-dialog-head">
+      <h2 id="dialog-privacy-title">개인정보 처리방침</h2>
+      <button type="submit" aria-label="닫기">닫기</button>
+    </form>
+    <div class="legal-dialog-body">
+      <h3>1. 수집하는 개인정보 항목</h3>
+      <p>필수: 참여 회차, 실명, 휴대폰 번호, 결제 정보(결제 수단, 결제 금액, 승인 번호)<br>선택: 이메일 주소, 사전 질문지 응답(나이, 직업·직무, AI 사용 경험, 학습 희망 내용)</p>
+      <h3>2. 개인정보의 수집·이용 목적</h3>
+      <p>수업 준비와 참여자 학습 희망 파악, 결제 확인, 참가 확정 및 상세 장소 안내 문자 발송, 취소·환불 처리에 사용합니다.</p>
+      <h3>3. 보유 및 이용 기간</h3>
+      <p>참여 회차 수업 종료 후 90일 보관 후 지체 없이 파기합니다. 다만 전자상거래법 등 관계 법령이 보존을 요구하는 결제·계약 기록은 해당 기간 동안 별도 보관합니다. 복구용 백업은 저장소 정책에 따라 최대 30일 내 만료됩니다.</p>
+      <h3>4. 개인정보 처리의 위탁</h3>
+      <p>결제 처리: 토스페이먼츠(주) — 카드·간편결제·가상계좌 결제의 승인과 취소 대행. 회사는 카드번호 등 결제 비밀정보를 직접 저장하지 않습니다.</p>
+      <h3>5. 정보주체의 권리</h3>
+      <p>이용자는 언제든지 자신의 개인정보 열람·정정·삭제·처리정지를 요구할 수 있으며, 요청은 고객센터(010-9702-1213, cheeuuuuu@gmail.com)로 접수합니다.</p>
+      <h3>6. 동의를 거부할 권리</h3>
+      <p>이용자는 개인정보 수집·이용 동의를 거부할 수 있으며, 동의하지 않으면 수강 신청과 결제를 진행할 수 없습니다.</p>
+      <h3>7. 개인정보 보호 책임자</h3>
+      <p>주식회사 대성컨템포러리 대표 손루미 · cheeuuuuu@gmail.com · 010-9702-1213</p>
+    </div>
+  </dialog>
+
+  <dialog class="legal-dialog" id="dialog-refund" aria-labelledby="dialog-refund-title">
+    <form method="dialog" class="legal-dialog-head">
+      <h2 id="dialog-refund-title">취소·환불 규정</h2>
+      <button type="submit" aria-label="닫기">닫기</button>
+    </form>
+    <div class="legal-dialog-body">
+      <h3>환불 기준</h3>
+      <ul>
+        <li>수업일 <strong>2주 전까지</strong> 취소 — 수강료 전액 환불</li>
+        <li>수업일 <strong>2주 전 ~ 7일 전</strong> 취소 — 수강료의 50% 환불</li>
+        <li>수업일 <strong>7일 전 이후</strong> 및 당일 취소·불참 — 환불 불가</li>
+        <li>회사 사정으로 수업이 취소되는 경우 — 수강료 전액 환불</li>
+      </ul>
+      <h3>신청 방법</h3>
+      <p>고객센터 010-9702-1213 또는 cheeuuuuu@gmail.com으로 참여 회차와 실명, 결제 수단을 알려주시면 확인 후 처리합니다.</p>
+      <h3>처리 기간</h3>
+      <p>환불은 접수 후 3영업일 이내에 결제 수단으로 취소 요청하며, 카드사·간편결제 사업자의 정책에 따라 실제 반영까지 영업일이 더 소요될 수 있습니다. 가상계좌 결제의 환불은 등록된 환불 계좌로 입금됩니다.</p>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript-message">사전 질문지를 작성하려면 JavaScript를 켜주세요.</p></noscript>
+</body>
+</html>
